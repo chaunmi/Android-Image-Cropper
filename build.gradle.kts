@@ -1,8 +1,12 @@
 buildscript {
   repositories {
-    mavenCentral()
-    google()
-    gradlePluginPortal()
+    maven { url=uri("https://maven.aliyun.com/repository/public") }
+    maven { url=uri("https://maven.aliyun.com/repository/google") }
+    maven {
+      url=uri("https://maven.aliyun.com/repository/gradle-plugin")
+    }
+    maven { url=uri("https://maven.aliyun.com/repository/jcenter") }
+    maven { url=uri("https://maven.aliyun.com/repository/central") }
   }
   dependencies {
     classpath(libs.plugin.android.cache.fix)
@@ -47,9 +51,13 @@ codeQualityTools {
 
 allprojects {
   repositories {
-    google()
-    mavenCentral()
-    gradlePluginPortal()
+    maven { url=uri("https://maven.aliyun.com/repository/public") }
+    maven { url=uri("https://maven.aliyun.com/repository/google") }
+    maven {
+      url=uri("https://maven.aliyun.com/repository/gradle-plugin")
+    }
+    maven { url=uri("https://maven.aliyun.com/repository/jcenter") }
+    maven { url=uri("https://maven.aliyun.com/repository/central") }
   }
 }
 
